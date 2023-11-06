@@ -45,17 +45,26 @@ ul:nth-child(2) {
 
 .grid {
     display: grid;
-    grid-template-columns: 100px 15px 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr 2vw 14vw 14vw 2vw 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     column-gap: 5px;
     row-gap: 10px;
     padding: 15px;
     border: 1px solid black;
+    height: 100vw;
 
 }
 
+.grid__knob {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    height: 100%;
+}
+
 .grid__knob img {
-    width: 100px;
+    width: 100%;
 }
 
 .grid > * {
@@ -63,5 +72,11 @@ ul:nth-child(2) {
 }
 
 .grid p, article {
-    padding: 10px;
+    padding: 15px;
 }
+
+.meter {
+    width: 100%;
+    align-self: flex-end;
+}
+
