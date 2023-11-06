@@ -1,106 +1,6 @@
 @import './global.css';
 
 
-.section__container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.section__item {
-    width: 500px;
-    padding: 15px;
-    /* border: 1px red solid; */
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background-color: white;
-}
-
-.section__item-objects {
-    /* border: 1px pink solid; */
-    display: flex;
-    flex-direction: row;
-    background-color: white;
-    flex-grow: 1;
-    flex-basis: 0;
-    gap: 10px;
-}
-
-
-/* -------knob-------- */
-
-.section__item-objects__knob {
-    /* border: 1px black solid; */
-    width: 100px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    justify-content: flex-start;
-
-}
-
-.section__item-objects__knob-header {
-    /* border: 1px black solid; */
-}
-
-.section__item-objects__knob-img {
-    /* border: 1px black solid; */
-}
-
-/* ------------------ */
-
-.section__item-objects__text {
-    border-left: 1px black solid;
-    border-right: 1px black solid;
-    width: 100%;
-    height: 100%;
-    padding-left: 20px;
-
-}
-
-
-
-.section__item-objects__overlay {
-    border: 1px blue solid;
-    position: absolute;
-    left: 125px;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    transition: 
-    height 2s;
-}
-
-
-
-/* .section__item-objects__knob:hover + .section__item-objects__overlay {
-    height: 0;
-}
-
-
-.section__item-objects__knob:hover + #test {
-    top: 0;
-    bottom: 0;
-} */
-
-#test {
-    border: 1px purple solid;
-    /* margin-left: 25px; */
-    width: 400px;
-    height: 100%;
-
-    position: absolute;
-    left: 100px;
-    /* top: 100px; */
-    bottom: 0;
-    transition: 
-    top 2s;
-
-}
-
-
 
  .section-item-objects-meter {
     height: 0;
@@ -109,7 +9,7 @@
 }
 
 
-.section__item-objects__text li {
+article ul li {
     margin-left: 20px;
     line-height: 1.4;
 }
@@ -135,13 +35,13 @@ ul:nth-child(2) {
 }
 
 
-.topic-text {
+/* .topic-text {
     position: absolute;
     /* border: solid 1px black; */
-    padding: 15px;
+    /* padding: 15px;
     line-height: 1.4;
     background-color: antiquewhite;
-}
+} */ 
 
 .grid {
     display: grid;
@@ -159,7 +59,7 @@ ul:nth-child(2) {
 }
 
 .grid > * {
-    /* border: 1px solid black; */
+    border: 1px solid black;
 }
 
 .grid p, article {
