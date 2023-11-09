@@ -1,19 +1,9 @@
 @import './global.css';
 
-
-
- .section-item-objects-meter {
-    height: 0;
-    transition: 
-    height 2s;
-}
-
-
 article ul li {
     margin-left: 20px;
     line-height: 1.4;
 }
-
 
 h2 {
     text-align: center;
@@ -34,25 +24,15 @@ ul:nth-child(2) {
     margin-top: 10px;
 }
 
-
-/* .topic-text {
-    position: absolute;
-    /* border: solid 1px black; */
-    /* padding: 15px;
-    line-height: 1.4;
-    background-color: antiquewhite;
-} */ 
-
 .grid {
     display: grid;
-    grid-template-columns: 1fr 2vw 14vw 14vw 2vw 1fr;
+    grid-template-columns: 1fr  14vw 2vw 2vw 14vw 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     column-gap: 5px;
     row-gap: 10px;
     padding: 15px;
     border: 1px solid black;
-    height: 100vw;
-
+    max-height: 100vw;
 }
 
 .grid__knob {
@@ -65,6 +45,7 @@ ul:nth-child(2) {
 
 .grid__knob img {
     width: 100%;
+    max-width: 100px;
 }
 
 .grid > * {
@@ -78,5 +59,7 @@ ul:nth-child(2) {
 .meter {
     width: 100%;
     align-self: flex-end;
+    background-color: green;
+    height: 100%;
 }
 
