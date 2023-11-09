@@ -1,19 +1,9 @@
 @import './global.css';
 
-
-
- .section-item-objects-meter {
-    height: 0;
-    transition: 
-    height 2s;
-}
-
-
 article ul li {
     margin-left: 20px;
     line-height: 1.4;
 }
-
 
 h2 {
     text-align: center;
@@ -34,28 +24,28 @@ ul:nth-child(2) {
     margin-top: 10px;
 }
 
-
-/* .topic-text {
-    position: absolute;
-    /* border: solid 1px black; */
-    /* padding: 15px;
-    line-height: 1.4;
-    background-color: antiquewhite;
-} */ 
-
 .grid {
     display: grid;
-    grid-template-columns: 100px 15px 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr  14vw 2vw 2vw 14vw 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     column-gap: 5px;
     row-gap: 10px;
     padding: 15px;
     border: 1px solid black;
+    max-height: 100vw;
+}
 
+.grid__knob {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    height: 100%;
 }
 
 .grid__knob img {
-    width: 100px;
+    width: 100%;
+    max-width: 100px;
 }
 
 .grid > * {
@@ -63,5 +53,13 @@ ul:nth-child(2) {
 }
 
 .grid p, article {
-    padding: 10px;
+    padding: 15px;
 }
+
+.meter {
+    width: 100%;
+    align-self: flex-end;
+    background-color: green;
+    height: 100%;
+}
+
