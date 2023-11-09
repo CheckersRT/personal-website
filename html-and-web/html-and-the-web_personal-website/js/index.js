@@ -1,5 +1,5 @@
 
-const meter = document.querySelector['[data-js="meter"]']
+const meter = document.querySelector('[data-js="meter"]')
 
 
 document.addEventListener("mousedown", (event) => {
