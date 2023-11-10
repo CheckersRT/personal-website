@@ -7,7 +7,7 @@ let startingOffset;
 
 knob.addEventListener("mousedown", (event) => {
   isMouseDown = true;
-  startingPosition = (window.innerHeight - event.clientY) / window.innerHeight;
+  // startingPosition = (window.innerHeight - event.clientY) / window.innerHeight;
   console.log(startingPosition);
   startingOffset = 1 - startingPosition;
   console.log(startingOffset);
@@ -16,6 +16,7 @@ knob.addEventListener("mousedown", (event) => {
 document.addEventListener("mouseup", (event) => {
   isMouseDown = false;
   startingPosition = (window.innerHeight - event.clientY) / window.innerHeight;
+  console.log(startingPosition);
 });
 
 document.addEventListener("mousemove", (event) => {
