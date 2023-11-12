@@ -5,42 +5,40 @@ let isMouseDown;
 let startingPosition;
 let startingOffset;
 let lastPosition = 1;
-let rotatePercentage; 
+let rotatePercentage;
 let rotateAmount;
 
 // startingPosition = 1 or last position
-
 
 knob.addEventListener("mousedown", (event) => {
   isMouseDown = true;
 
   startingPosition = (window.innerHeight - event.clientY) / window.innerHeight;
-
 });
 
 document.addEventListener("mousemove", (event) => {
-  
   if (isMouseDown) {
+    console.log(startingPosition);
 
-  console.log(startingPosition);
+    movePosition = (window.innerHeight - event.clientY) / window.innerHeight;
+    console.log(`movePosition is: ${movePosition}`);
+    console.log(`lastPosition is: ${lastPosition}`);
 
-  movePosition = (window.innerHeight - event.clientY) / window.innerHeight;
-  console.log(`movePosition is: ${movePosition}`);
-  console.log(`lastPosition is: ${lastPosition}`);
+    if (lastPosition) {
+      startingOffset = lastPosition - startingPosition;
+      console.log(`startingOffset is: ${startingOffset}`);
+    } else {
+      startingOffset = 1 - startingPosition;
+    }
 
-  if(lastPosition){
-    startingOffset = lastPosition -  startingPosition;
-    console.log(`startingOffset is: ${startingOffset}`);
+    rotateAmount = movePosition + startingOffset;
 
-  } else {startingOffset = 1 - startingPosition;
+    if (rotateAmount >= 0.6 && rotateAmount <= 1.4) {
+      knob.style.transform = `rotate(${rotateAmount}turn)`;
+      console.log(`rotation amount is: ${knob.style.transform}`);
+    }
   }
-
-  rotateAmount = movePosition + startingOffset;
-
-  knob.style.transform = `rotate(${rotateAmount}turn)`;
-  console.log(`rotation amount is: ${knob.style.transform}`);
-
-  } return;
+  return;
 });
 
 document.addEventListener("mouseup", (event) => {
@@ -48,6 +46,3 @@ document.addEventListener("mouseup", (event) => {
   lastPosition = rotateAmount;
   console.log(lastPosition);
 });
-
-
-
