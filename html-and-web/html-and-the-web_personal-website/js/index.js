@@ -7,6 +7,7 @@ let startingOffset;
 let lastPosition = 1;
 let rotatePercentage;
 let rotateAmount;
+let meterHeight;
 
 // startingPosition = 1 or last position
 
@@ -36,6 +37,11 @@ document.addEventListener("mousemove", (event) => {
     if (rotateAmount >= 0.6 && rotateAmount <= 1.4) {
       knob.style.transform = `rotate(${rotateAmount}turn)`;
       console.log(`rotation amount is: ${knob.style.transform}`);
+
+      meterHeight = `${(rotateAmount - 0.25)*100}%`
+        
+      meter.style.height = meterHeight;
+      console.log(`the meterHeight is: ${meterHeight}`);
     }
   }
   return;
